@@ -6,12 +6,12 @@ import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.c
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA85cnPTSmxfm__iesfCYaFMNtKM-6lc40",
-    authDomain: "meletric-703c8.firebaseapp.com",
-    projectId: "meletric-703c8",
-    storageBucket: "meletric-703c8.firebasestorage.app",
-    messagingSenderId: "774822964142",
-    appId: "1:774822964142:web:1660c5fb63bc4afdf2763f"
+  apiKey: "AIzaSyA85cnPTSmxfm__iesfCYaFMNtKM-6lc40",
+  authDomain: "meletric-703c8.firebaseapp.com",
+  projectId: "meletric-703c8",
+  storageBucket: "meletric-703c8.firebasestorage.app",
+  messagingSenderId: "774822964142",
+  appId: "1:774822964142:web:45678a64204f1113f2763f"
 };
 
 // Initialize Firebase
