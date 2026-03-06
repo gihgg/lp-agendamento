@@ -9,6 +9,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 #container {
     background-color: var(--color-primary-1);
     background-size: contain;
@@ -79,6 +85,7 @@ a.btn {
     color: var(--color-primary-3);
     border: 2px solid var(--color-primary-3);
     font-size: 1.8rem;
+    white-space: nowrap;
 
     &:hover {
         color: var(--color-neutral-0);
@@ -150,7 +157,7 @@ a.btn {
     .servicos-cards {
         .servicos-card {
             img {
-                width: clamp(400px, 5vw, 800px);
+                width: clamp(250px, 90vw, 400px);
             }
         }
     }
@@ -174,7 +181,7 @@ a.btn {
         gap: 24px;
 
         .about-image {
-            width: clamp(500px, 50vw, 800px);
+            width: clamp(250px, 90vw, 800px);
         }
 
         .about-info {
