@@ -268,6 +268,22 @@ a.btn {
     background-color: rgb(165, 70, 70);
 }
 
+.btn-update {
+    background-color: green;
+    color: var(--color-neutral-0);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-end; 
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.btn-update:hover {
+    background-color: rgb(96, 155, 96);
+}
+
 .agendamento-card:hover {
     transform: translateY(-6px);
     background-color: var(--color-primary-1);

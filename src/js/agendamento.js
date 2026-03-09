@@ -43,8 +43,9 @@ form.addEventListener("submit", async (e) => {
             return;
         }
 
-        if (telefone.length < 10) {
-            mostrarMensagem("Digite um telefone válido!");
+        const somenteNumeros = telefone.replace(/\D/g, "");
+        if (somenteNumeros.length !== 11) {
+            mostrarMensagem("Digite um telefone válido com 11 dígitos!");
             return;
         }
 
@@ -84,8 +85,44 @@ btnExit.addEventListener("click", () => {
     history.back();
 });
 
-document.getElementById('btnVisualizar').addEventListener("click", function() {
+// Botão de Visualizar Agendamentos 
+document.getElementById('btnVisualizar').addEventListener("click", function () {
     window.location.href = "visualizar.html";
+});
+
+// Botão de Consulta Específica
+
+const consultaInput = document.getElementById("consulta");
+
+consultaInput.addEventListener("input", (e) => {
+    let value = e.target.value.replace(/\D/g, "");
+
+    if (value.length > 11) value = value.slice(0, 11);
+
+    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+    value = value.replace(/(\d{5})(\d)/, "$1-$2");
+
+    e.target.value = value;
+});
+
+const btnConsultar = document.getElementById("btnConsultar");
+
+
+btnConsultar.addEventListener("click", () => {
+    const telefone = consultaInput.value.replace(/\D/g, "");
+
+    if (telefone.length === 0) {
+        mostrarMensagem("Digite um telefone para consultar!");
+        return;
+    }
+
+    if (telefone.length < 11) {
+        mostrarMensagem("Digite o número de telefone completo (11 dígitos).");
+        return;
+    }
+
+    // O visualizar.html passa a estar com a filtragem do telefone
+    window.location.href = `visualizar.html?telefone=${encodeURIComponent(telefone)}`;
 });
 
 
